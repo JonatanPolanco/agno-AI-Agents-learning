@@ -161,14 +161,14 @@ class ValidationRouter:
         """
         Process query through validation pipeline then team analysis
         """
-        print("🔍 Validating news claims...")
+        print("Validating news claims...")
         
         # Step 1: Validate the query
         validation_result = self.validator.run(
             f"Please fact-check this query and provide enhanced context: {query}"
         )
         
-        print("✅ Validation complete. Proceeding with analysis...")
+        print("Validation complete. Proceeding with analysis...")
         
         # Step 2: Send validated context to team
         enhanced_prompt = f"""
@@ -243,16 +243,16 @@ def validated_finance_team(user: str = "user"):
     router = ValidationRouter(agent_team, news_validator)
     
     # Welcome messages
-    print("🚀 Validated Finance Team Ready!")
-    print("📋 Features: News fact-checking + Financial analysis")
+    print("Validated Finance Team Ready!")
+    print("Features: News fact-checking + Financial analysis")
     
     if session_id is None:
         session_id = agent_team.session_id
-        print(f"📝 Started New Session: {session_id}\n")
+        print(f"Started New Session: {session_id}\n")
     else:
-        print(f"📂 Continuing Session: {session_id}\n")
+        print(f"Continuing Session: {session_id}\n")
     
-    print("💡 Example queries:")
+    print("Example queries:")
     print("  • 'Impact of Trump attacking Venezuela on banking stocks'")
     print("  • 'Tesla recall affecting stock price this week'") 
     print("  • 'Fed rate hike rumors impact on tech stocks'")
@@ -261,22 +261,22 @@ def validated_finance_team(user: str = "user"):
     
     # Interactive loop
     while True:
-        user_query = input("💰 Ask the Validated Finance Team: ")
+        user_query = input("Ask the Validated Finance Team: ")
         if user_query.lower() in {"exit", "quit", "bye"}:
-            print("👋 Thanks for using Validated Finance Team!")
+            print("Thanks for using Validated Finance Team!")
             break
         
         if not user_query.strip():
             continue
             
         try:
-            print(f"\n📊 Processing: {user_query}")
+            print(f"\nProcessing: {user_query}")
             response = router.route(user_query)
-            print(f"\n📈 **Complete Analysis:**\n{response}\n")
+            print(f"\n**Complete Analysis:**\n{response}\n")
             print("-" * 60)
             
         except Exception as e:
-            print(f"❌ Error: {str(e)}")
+            print(f"Error: {str(e)}")
             print("Please try again with a different query.\n")
 
 if __name__ == "__main__":
