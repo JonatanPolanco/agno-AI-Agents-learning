@@ -261,7 +261,7 @@ def validated_finance_team(user: str = "user"):
     
     # Interactive loop
     while True:
-        user_query = input("💰 Ask the Validated Finance Team: ")
+        user_query = input("💰 Ask the Finance Team: ")
         if user_query.lower() in {"exit", "quit", "bye"}:
             print("👋 Thanks for using Validated Finance Team!")
             break
