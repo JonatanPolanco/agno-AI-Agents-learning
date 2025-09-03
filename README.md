@@ -1,6 +1,9 @@
-Learning about Agno AI agents development framewort:
+# agno-ai-agents-learning
 
-- https://github.com/agno-agi/agno
+## Learning about Agno AI agents development framework:
+- https://github.com/agno-ai/agno_agents
 - https://docs.agno.com/introduction/agents
 
-<a href="finance_agent_team_export.pdf" class="image fit"><img src="images/marr_pic.jpg" alt=""></a>
+![Vista previa del PDF](images/finance_agent_team_export.png)
+
+[Descargar PDF](finance_agent_team_export.pdf)
